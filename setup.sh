@@ -23,8 +23,14 @@ else
     echo "  ** Edit the file and set your OPENAI_API_KEY **"
 fi
 
-# 3. Permission reminder
-echo "[3/3] Permission setup..."
+# 3. Setup custom slash command
+echo "[3/4] Setting up /voice-session command..."
+mkdir -p .claude/commands
+cp voice-session.md .claude/commands/voice-session.md
+echo "  Done."
+
+# 4. Permission reminder
+echo "[4/4] Permission setup..."
 echo "  Add the following to ~/.claude/settings.json allowlist:"
 echo '    "mcp__voicemode"'
 echo ""
